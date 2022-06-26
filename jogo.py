@@ -1,4 +1,14 @@
-print('Boas Vindas ao Python The Game!')
+def mensagens_iniciais():
+    print('Boas Vindas ao Python The Game!')
+    print('REGRAS')
+    print('Ao longo do jogo serão exibidas perguntas a serem respondidas pelo teclado')
+
+def calcular_idade(ano_nascimento, ano_atual):
+    idade = ano_atual - ano_nascimento
+    return idade
+
+
+mensagens_iniciais()
 print('Gostaria muito de saber o seu nome!')
 
 # ESTRUTURAS DE DADOS - DICIONÁRIO
@@ -8,8 +18,10 @@ print('Olá, é um prazer ter voçê {} jogando o nosso jogo!'.format(dados_joga
 
 idade_jogador = int(input('Eu gostaria de saber em que ano voçê nasceu? ')) #convertendo o ano de nascimento em numero
 
-dados_jogador['idade'] = 2022 - idade_jogador
-print('Que legal,, vi aqui que voçê {} tem {} anos!\n '.format(dados_jogador['nome'], dados_jogador['idade']))
+
+dados_jogador['idade'] = calcular_idade(idade_jogador, 2022)
+
+print('Que legal,vi aqui que voçê {} tem {} anos!\n '.format(dados_jogador['nome'], dados_jogador['idade']))
 
 print('Agora que já te conheço posso te levar em muitas aventuras, oque deseja fazer?')
 escolha = input('SIM - quero iniciar uma aventura \nNÃO - quero ficar por aqui\n').upper()  # deixa a letra em caixa alta
